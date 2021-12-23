@@ -10,7 +10,7 @@
         ></v-img>
       </v-col>
       <v-col cols="5">
-        <p class="text-h3 font-weight-bold pb-5">A propos de moi</p>
+        <p class="text-h3 font-weight-bold pb-5 custom-border-title-section">A propos de moi</p>
         <p class="text--secondary text-body-1 pb-5">
             Je suis diplomé d'un bac+2 en développement web et mobile. Spécialisé dans le développement mdoerne d'application web et mobile.
         </p>
@@ -45,28 +45,40 @@
         <v-row class="justify-space-around">
           <v-btn
             href="https://github.com/jeremyogerjs"
-            color="purple darken-1"
+            color="#90acd1"
             target="_blank"
+            rounded="pill"
+            x-large
+            class="custom-color-text-btn"
+            :ripple="false"
           >
             <v-icon>mdi-github</v-icon>
             Github
           </v-btn>
           <v-btn
             href="https://www.linkedin.com/in/jeremy-oger-a78143171/"
-            color="blue lighten-1"
+            color="#90acd1"
             target="_blank"
+            rounded="pill"
+            x-large
+            class="custom-color-text-btn"
+            :ripple="false"
           >
             <v-icon>mdi-linkedin</v-icon>
             LinkedIn
           </v-btn>
-          <v-btn
-            href="https://www.linkedin.com/in/jeremy-oger-a78143171/"
-            color="white"
-            target="_blank"
-          >
-            <v-icon>mdi-download</v-icon>
-            Télécharger mon CV
-          </v-btn>
+            <v-btn
+            href="./CV-jérémyOger-étudiant.pdf"
+              color="#90acd1"
+              target="_blank"
+              rounded="pill"
+              x-large
+              class="custom-color-text-btn"
+              :ripple="false"
+            >
+              <v-icon>mdi-download</v-icon>
+              Télécharger mon CV
+            </v-btn>
         </v-row>
       </v-col>
     </v-row>
@@ -74,6 +86,7 @@
 </template>
 
 <script>
+
 export default {
   name: "About",
   data() {
@@ -94,5 +107,31 @@ export default {
 .custom-ul {
     list-style: none;
     padding-left: 0;
+}
+.custom-color-text-btn {
+  color: white;
+}
+
+.custom-border-title-section {
+    position: relative;
+}
+.custom-border-title-section::after {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    background-color: #e45447;
+    border-radius: 50%;
+    width: .3em;
+    height: .3em;
+}
+.custom-border-title-section::before {
+    content: "";
+    position: absolute;
+    top: 98%;
+    left: 0%;
+    background-color: #e45447;
+    width: 3em;
+    height: 0.05em;
 }
 </style>

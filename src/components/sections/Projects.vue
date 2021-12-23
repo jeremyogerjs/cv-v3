@@ -1,7 +1,7 @@
 <template>
   <div class="custom-bg">
-    <p class="text-center font-weight-black text-h3">Mes projets</p>
-    <v-row class="justify-center">
+    <p class="text-center font-weight-black text-h3 pb-5 custom-border-title-section">Mes projets</p>
+    <v-row class="justify-center my-10 py-5">
       <v-card
         elevation="0"
         v-for="(item, index) in projects"
@@ -12,7 +12,7 @@
         <a :href="item.path" target="_blank">
           <div class="custom-overlay"></div>
           <div class="reset-opacity">
-            <v-card-title class="text-h5 white-text">
+            <v-card-title class="text-h5 white--text">
               {{ item.type }}
             </v-card-title>
             <v-card-text>
@@ -65,7 +65,7 @@ export default {
 <style scoped>
 .custom-bg {
   background-color: #f9f9ff;
-  padding: 2em;
+  padding: 5em 0;
 }
 .custom-overlay {
   position: absolute;
@@ -73,7 +73,7 @@ export default {
   height: 100%;
   width: 100%;
   opacity: 0;
-  z-index: 30;
+  z-index: 2;
   transition: all 0.3s ease-in-out;
 }
 .custom-card-hover:hover .custom-overlay {
@@ -97,5 +97,28 @@ export default {
     color: white;
     z-index: 999;
     transform: translate(-70px,30px);
+}
+
+.custom-border-title-section {
+    position: relative;
+}
+.custom-border-title-section::after {
+    content: "";
+    position: absolute;
+    top: 113%;
+    left: 49.5%;
+    background-color: #e45447;
+    border-radius: 50%;
+    width: .25em;
+    height: .25em;
+}
+.custom-border-title-section::before {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 46%;
+    background-color: #e45447;
+    width: 3em;
+    height: 0.05em;
 }
 </style>

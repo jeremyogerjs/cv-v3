@@ -1,7 +1,7 @@
 <template>
     <div class="custom-section">
-        <p class="text-center text-h2 pb-12 font-weight-black">Résumé</p>
-        <v-row justify="center" class="mx-auto">
+        <p class="text-center text-h2 pb-2 custom-border-title-section font-weight-black">Résumé</p>
+        <v-row justify="center" class="mx-auto my-10">
             
             <v-col cols="2" >
                 <v-list class="custom-menu-resume">
@@ -9,11 +9,13 @@
                         v-for="item in menuItems"
                         :key="item.title"
                         :href="item.path"
-                        active-class="custom-nav"
+                        :class="{'v-list-item--active' : item.isActive }"
                         :ripple="false"
+                        link
+                        @change="navItemActive(item)"
                     >
                         <v-list-item-content>
-                            <v-list-item-title class="font-weight-bold"> {{ item.title }} </v-list-item-title>
+                            <v-list-item-title class="font-weight-bold">{{ item.title }} </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </v-list>
@@ -49,11 +51,17 @@ export default {
     data() {
         return {
             menuItems:[
-                {title:"Formations",icon:"",path:"#formations"},
-                {title:"Experiences",icon:"",path:"#experiences"},
-                {title:"Compétences",icon:"",path:"#competences"},
-                {title:"Récompences",icon:"",path:"#recompenses"},
-            ]
+                {title:"Formations",icon:"",path:"#formations",isActive:false},
+                {title:"Experiences",icon:"",path:"#experiences",isActive:false},
+                {title:"Compétences",icon:"",path:"#competences",isActive:false},
+                {title:"Récompences",icon:"",path:"#recompenses",isActive:false},
+            ],
+        }
+    },
+    methods:{
+        navItemActive(elem) {
+            this.menuItems.forEach(el => el.isActive = false);
+            elem.isActive = true;
         }
     }
 }
@@ -70,5 +78,73 @@ export default {
 }
 .custom-section {
     padding: 5em 0;
+}
+.v-list-item--active {
+    color: #90ACD1;
+    background-color: transparent;
+    transform: translateX(50px);
+    transition: transform .3s ease-in-out;
+}
+.v-list-item {
+    transition: all .3s ease-in-out;
+}
+.v-list-item--active::before {
+    content: "";
+    top: 45%;
+    left: -10px;
+    position: absolute;
+    border: #90ACD1 1px solid;
+    height: 1px;
+    width: 15px;
+    transition: all .3s ease-in-out;
+}
+.v-list-item--link::before {
+    top: 45%;
+    left: -20px;
+    position: absolute;
+    border: #90ACD1 1px solid;
+    height: 1px;
+    width: 25px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+.custom-border-title-section {
+    position: relative;
+}
+.custom-border-title-section::after {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 49.9%;
+    background-color: #e45447;
+    border-radius: 50%;
+    width: .25em;
+    height: .25em;
+}
+.custom-border-title-section::before {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 47%;
+    background-color: #e45447;
+    width: 2em;
+    height: 0.05em;
+}
+/**reset css vuetify */
+.theme--light.v-list-item:hover::before {
+    opacity: 0;
+}
+.theme--light.v-list-item:hover::before {
+    opacity: 0;
+}
+.v-list-item--link:before {
+    background-color: transparent;
+}
+.theme--light.v-list-item--active:hover::before{
+    opacity: 1;
+}
+.theme--light.v-list-item--active::before {
+    opacity: 1;
+    transition: all .5s ease-in-out;
 }
 </style>

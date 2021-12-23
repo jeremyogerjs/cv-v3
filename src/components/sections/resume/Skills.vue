@@ -5,47 +5,66 @@
       <v-col cols="12" class="d-flex align-center">
         <v-row justify="center" class="pa-2">
           <v-col cols="4" class="text-center">
-            <p class="text-uppercase">Frontend</p>
-            
-            <v-progress-linear
+             <div
               v-for="(skill, index) in skills.frontend"
               :key="index"
-              :value="skill.value"
-              color="#90acd1"
-              height="25"
-              rounded
-              class="mb-5"
             >
-              {{ skill.title }} {{ skill.value }}%</v-progress-linear
-            >
+              <div class="d-flex justify-space-between black--text">
+                <p>{{ skill.title }}</p>
+                <p>{{ skill.value }}%</p>
+              </div>
+              <v-progress-linear
+                
+                :value="skill.value"
+                color="#90acd1"
+                height="8"
+                rounded
+                class="mb-5"
+              >
+                </v-progress-linear
+              >
+            </div>
           </v-col>
           <v-col cols="4" class="text-center">
-            <p class="text-uppercase">Backend</p>
-            <v-progress-linear
+            <div
               v-for="(skill, index) in skills.backend"
               :key="index"
-              :value="skill.value"
-              color="#90acd1"
-              height="30"
-              rounded
-              class="mb-5"
             >
-              {{ skill.title }} {{ skill.value }}%</v-progress-linear
-            >
+              <div class="d-flex justify-space-between black--text">
+                <p>{{ skill.title }}</p>
+                <p>{{ skill.value }}%</p>
+              </div>
+              <v-progress-linear
+                
+                :value="skill.value"
+                color="#90acd1"
+                height="8"
+                rounded
+                class="mb-5"
+              >
+                </v-progress-linear
+              >
+            </div>
           </v-col>
           <v-col cols="4" class="text-center">
-            <p class="text-uppercase">Méthodologie</p>
-            <v-progress-linear
+            <div
               v-for="(skill, index) in skills.methodologie"
               :key="index"
-              :value="skill.value"
-              color="#90acd1"
-              height="30"
-              rounded
-              class="mb-5"
             >
-              {{ skill.title }} {{ skill.value }}%</v-progress-linear
-            >
+              <div class="d-flex justify-space-between black--text">
+                <p>{{ skill.title }}</p>
+                <p>{{ skill.value }}%</p>
+              </div>
+              <v-progress-linear
+                :value="skill.value"
+                color="#90acd1"
+                height="8"
+                rounded
+                class="mb-5"
+              >
+                </v-progress-linear
+              >
+            </div>
           </v-col>
         </v-row>
       </v-col>
