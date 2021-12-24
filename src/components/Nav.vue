@@ -17,18 +17,28 @@
     </v-navigation-drawer>
     
     <v-app-bar fixed elevation="4" color="white">
-      <v-spacer></v-spacer>
-      <span class="hidden-sm-and-up">
-        <v-app-bar-nav-icon @click="sidebar = !sidebar"></v-app-bar-nav-icon>
-      </span>
-      <v-toolbar-title class="black--text text-h4 d-flex align-center" id="me">
+            <v-spacer></v-spacer>
+      <v-toolbar-title class="black--text text-h5 text-sm-h5 d-flex align-center" id="me">
         <a href="#home" class="text-decoration-none black--text ">
           <v-icon color="black" x-large>mdi-color-helper</v-icon> 
           Jérémy Oger
         </a>
       </v-toolbar-title>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <v-spacer class="hidden-lg-only hidden-xl-only hidden-md-only"></v-spacer>
+      <span class="hidden-lg-only hidden-xl-only hidden-md-only">
+        <v-app-bar-nav-icon @click="sidebar = !sidebar"></v-app-bar-nav-icon>
+      </span>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items class="hidden-xs-only hidden-sm-only">
         <v-btn
           color="black"
           text

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <v-row class="justify-center align-center hero-bg" style="height:100vh">
-            <v-col cols="4">
+        <v-row class="justify-sm-center align-center hero-bg" style="height:100vh">
+            <v-col cols="9" sm="9" lg="4" xl="4" class="custom-mobile-hero">
                 <span class="font-weight-bold text-h5 custom-color">Hey ! Je suis</span>
                 <p class="font-weight-bold text-h2">Jérémy Oger !</p>
                 <v-row class="align-center py-4">
@@ -13,7 +13,7 @@
                     sed do eiusm tempor incididunt ulabore et dolore magna aliqua.
                 </p>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="9" sm="9" lg="4" xl="4" class="hidden-sm-only hidden-md-only hidden-xs-only">
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi sint officia voluptas, rem voluptatibus reprehenderit nostrum numquam nulla quam accusamus excepturi alias consectetur assumenda vitae sapiente officiis ab quidem perspiciatis?</p>
                 </div>
@@ -86,5 +86,11 @@ export default {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #e45447; }
+}
+
+@media screen and (max-width:600px) {
+    .custom-mobile-hero{
+        margin: 0 auto
+    }
 }
 </style>

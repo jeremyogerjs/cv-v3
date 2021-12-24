@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="text-h3 font-weight-bold">Formations</p>
+    <p class="text-h4 text-sm-h3 font-weight-bold">Formations</p>
     <v-card
       v-for="(item, index) in formations"
       :key="index"
@@ -11,7 +11,7 @@
       <v-row >
         <v-col
           cols="1"
-          class="d-flex align-start justify-center"
+          class="d-flex align-start justify-center custom-icon-mobile"
         >
           <span class="custom-icon-wrap">
             <v-icon x-large class="custom-icon-hover">mdi-school</v-icon>
@@ -94,5 +94,10 @@ export default {
 }
 .custom-hover:hover .custom-icon-hover {
     color: #90acd1;
+}
+@media screen and (max-width:1030px) {
+    .custom-icon-mobile {
+        display: none !important;
+    }
 }
 </style>

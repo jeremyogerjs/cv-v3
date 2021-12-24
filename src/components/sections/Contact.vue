@@ -1,14 +1,26 @@
 <template>
   <div class="pt-10">
-    <h4
-      class="text-center font-weight-black custom-border-title-section text-h3"
+    <p
+      class="
+        text-center
+        font-weight-black
+        custom-border-title-section
+        text-h4 text-sm-h3
+      "
     >
       Travaillons ensemble
-    </h4>
+    </p>
     <v-row class="pa-4 my-7 justify-center">
-      <v-col cols="5" class="d-flex align-center black--text">
-        <v-col class="mx-auto" cols="5">
-          <p class="text-h5 d-flex align-center mb-6">
+      <v-col
+        cols="12"
+        sm="12"
+        md="12"
+        lg="5"
+        xl="5"
+        class="d-flex align-center black--text"
+      >
+        <v-col class="mx-auto" cols="12" sm="12" md="12" lg="5" xl="5">
+          <p class="text-sm-h5 text-h6 d-flex align-center mb-6">
             <span
               class="custom-wrap-icon pa-2 d-flex align-center justify-center"
             >
@@ -16,7 +28,7 @@
             </span>
             <span class="ml-2"> 83.14.32 </span>
           </p>
-          <p class="text-h5 d-flex align-center">
+          <p class="text-sm-h5 text-h6 d-flex align-center">
             <span
               class="custom-wrap-icon pa-2 d-flex align-center justify-center"
             >
@@ -26,7 +38,7 @@
           </p>
         </v-col>
       </v-col>
-      <v-col cols="5">
+      <v-col cols="12" sm="12" md="12" lg="5" xl="5">
         <v-form v-model="valid" @submit.prevent="sendEmail">
           <v-row class="pb-5">
             <v-col>
@@ -156,5 +168,69 @@ export default {
   background-color: #e45447;
   width: 3em;
   height: 0.05em;
+}
+
+@media screen and (max-width: 1030px) {
+  .custom-border-title-section::after {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 50.5%;
+    background-color: #e45447;
+    border-radius: 50%;
+    width: 0.25em;
+    height: 0.25em;
+  }
+  .custom-border-title-section::before {
+    content: "";
+    position: absolute;
+    top: 130%;
+    left: 44%;
+    background-color: #e45447;
+    width: 3em;
+    height: 0.05em;
+  }
+}
+@media screen and (max-width: 770px) {
+  .custom-border-title-section::after {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 48.5%;
+    background-color: #e45447;
+    border-radius: 50%;
+    width: 0.25em;
+    height: 0.25em;
+  }
+  .custom-border-title-section::before {
+    content: "";
+    position: absolute;
+    top: 130%;
+    left: 40%;
+    background-color: #e45447;
+    width: 3em;
+    height: 0.05em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .custom-border-title-section::after {
+    content: "";
+    position: absolute;
+    top: 116%;
+    left: 49.4%;
+    background-color: #e45447;
+    border-radius: 50%;
+    width: 0.25em;
+    height: 0.25em;
+  }
+  .custom-border-title-section::before {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 37%;
+    background-color: #e45447;
+    width: 3em;
+    height: 0.05em;
+  }
 }
 </style>

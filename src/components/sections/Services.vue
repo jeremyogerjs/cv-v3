@@ -1,18 +1,18 @@
 <template>
   <div>
-    <v-row class="align-center justify-center py-12 custom-section-bg">
-      <v-col cols="3">
+    <v-row class="align-center flex-md-column flex-lg-row justify-sm-center text-center text-lg-start justify-center py-12 custom-section-bg">
+      <v-col cols="12" sm="8" md="8" lg="3" xl="3">
         <p class="text--secondary text-uppercase">Mes services</p>
-        <p class="font-weight-bold text-h4">
+        <p class="font-weight-bold text-h4 text-sm-h3">
           Voici mes talents a votre service.
         </p>
         <p class="text--secondary">
             J'adapte mes services en fonction de vos besoins.Attentif aux nouvelles technologies, j'apporte mon expertise toujours au goût du jour.
         </p>
       </v-col>
-      <v-col cols="6" class="ml-5">
-        <v-row>
-          <v-col cols="5" class="pa-0 mr-12">
+      <v-col cols="8" sm="8" md="8" lg="6" xl="6" class="ml-5">
+        <v-row class="custom-services-mobile">
+          <v-col cols="12" sm="10" md="10" lg="5" xl="5" class="pa-0 mr-lg-12">
             <v-card 
               elevation="16" 
               class="pa-12 rounded-lg text-center"
@@ -32,7 +32,7 @@
               >
             </v-card>
           </v-col>
-          <v-col cols="5" class="my-8 pa-0">
+          <v-col cols="12" sm="10" md="10" lg="5" xl="5" class="my-8 pa-0">
             <v-card 
               elevation="16" 
               class="pa-12 rounded-lg text-center"
@@ -90,5 +90,10 @@ export default {
   background-position: top right;
   background-size: 60%;
   margin-top: 4em;
+}
+@media screen and (max-width:1050px) {
+  .custom-services-mobile {
+    justify-content: center !important;
+  }
 }
 </style>

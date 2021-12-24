@@ -1,10 +1,10 @@
 <template>
   <div>
-    <p class="text-h3 font-weight-bold">Compétences</p>
+    <p class="text-h4 text-sm-h3 font-weight-bold">Compétences</p>
     <v-row class="mt-3">
-      <v-col cols="12" class="d-flex align-center">
+      <v-col cols="12" sm="12" md="12" lg="4" xl="4" class="d-flex align-center">
         <v-row justify="center" class="pa-2">
-          <v-col cols="4" class="text-center">
+          <v-col cols="12" class="text-center">
              <div
               v-for="(skill, index) in skills.frontend"
               :key="index"
@@ -25,7 +25,7 @@
               >
             </div>
           </v-col>
-          <v-col cols="4" class="text-center">
+          <v-col cols="12" sm="12" md="12" lg="4" xl="4" class="text-center">
             <div
               v-for="(skill, index) in skills.backend"
               :key="index"
@@ -46,7 +46,7 @@
               >
             </div>
           </v-col>
-          <v-col cols="4" class="text-center">
+          <v-col cols="12" sm="12" md="12" lg="4" xl="4" class="text-center">
             <div
               v-for="(skill, index) in skills.methodologie"
               :key="index"
