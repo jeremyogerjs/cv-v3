@@ -39,7 +39,7 @@
         </v-col>
       </v-col>
       <v-col cols="12" sm="12" md="12" lg="5" xl="5">
-        <v-form v-model="valid" @submit.prevent="sendEmail">
+        <v-form ref="form" v-model="valid" @submit.prevent="sendEmail">
           <v-row class="pb-5">
             <v-col>
               <v-text-field
@@ -81,16 +81,21 @@
             :rules="contentRules"
           >
           </v-textarea>
-          <v-btn color="success" :disabled="!valid" rounded type="submit">
+          <v-btn color="success" :disabled="!valid" :loading="loading" rounded type="submit">
             Envoyez un message maintenant
           </v-btn>
         </v-form>
       </v-col>
     </v-row>
-    <div class="text-center ma-2">
-      <v-snackbar v-model="isSend" timeout="2000">
+    <div class="text-center">
+      <v-snackbar class="mb-8" v-model="isSend" timeout="2000">
         Votre message a bien été envoyer !
         <v-btn color="pink" text @click="isSend === false"> Fermer</v-btn>
+      </v-snackbar>
+      <v-snackbar class="mb-8" v-model="isError" multi-line timeout="4000" color="red">
+        Une erreur est survenu veuillez réessayer plus tard !
+        Vous pouvez me contacter via l'email indiquer <span class="black--text text-decoration-underline">jeremy.devfs@gmail.com</span>
+        <v-btn color="white" text @click="isError === false"> Fermer</v-btn>
       </v-snackbar>
     </div>
   </div>
@@ -104,6 +109,8 @@ export default {
     return {
       valid: false,
       isSend: false,
+      isError:false,
+      loading:false,
       email: {
         service_id: "service_vskznp6",
         template_id: "template_pkoisjz",
@@ -111,7 +118,7 @@ export default {
         template_params: {
           from_name: "",
           email: "",
-          reply_to: "Contacter par mon portfolio",
+          reply_to: "Contacter via mon portfolio",
           message: "",
         },
       },
@@ -128,15 +135,19 @@ export default {
   },
   methods: {
     sendEmail() {
+      this.loading = true;
       axios
         .post("https://api.emailjs.com/api/v1.0/email/send", this.email)
-        .then((res) => {
-          if (res.status == 200) {
-            this.isSend === true;
-          }
-          console.log(res);
+        .then(() => {
+            this.loading = false;
+            this.isSend = true;
+            this.$refs.form.reset();
         })
-        .catch((err) => console.log("err: ", err));
+        .catch(() => {
+          this.loading = false;
+          this.isError = true;
+          this.$refs.form.reset();
+        });
     },
   },
 };
