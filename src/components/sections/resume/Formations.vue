@@ -4,7 +4,7 @@
     <v-card
       v-for="(item, index) in formations"
       :key="index"
-      class="pa-12 my-12 custom-hover"
+      class="pa-7 pa-md-12 my-10 my-md-12 custom-hover"
       elevation="0"
       rounded="xl"
     >
@@ -21,7 +21,7 @@
           <span class="font-weight-bold color-hover py-0 text-h6">
             {{ item.date }}
           </span>
-          <v-card-title class="text-h5 pl-0 pt-1 font-weight-bold color-hover">
+          <v-card-title class="text-h6 text-md-h5 pl-0 pt-1 font-weight-bold color-hover">
             {{ item.title }}
           </v-card-title>
           <v-card-subtitle class="color-hover pl-0">
@@ -29,7 +29,7 @@
           </v-card-subtitle>
         </v-col>
       </v-row>
-      <v-card-text>
+      <v-card-text class="pa-0">
         <p class="text-body-1 color-hover">{{ item.content }}</p>
       </v-card-text>
     </v-card>

@@ -5,7 +5,7 @@
         text-center
         font-weight-black
         custom-border-title-section
-        text-h4 text-sm-h3
+        text-h4 text-md-h3
       "
     >
       Travaillons ensemble
@@ -239,6 +239,27 @@ export default {
     position: absolute;
     top: 120%;
     left: 37%;
+    background-color: #e45447;
+    width: 3em;
+    height: 0.05em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .custom-border-title-section::after {
+    content: "";
+    position: absolute;
+    top: 117%;
+    left: 50.5%;
+    background-color: #e45447;
+    border-radius: 50%;
+    width: 0.25em;
+    height: 0.25em;
+  }
+  .custom-border-title-section::before {
+    content: "";
+    position: absolute;
+    top: 125%;
+    left: 39%;
     background-color: #e45447;
     width: 3em;
     height: 0.05em;

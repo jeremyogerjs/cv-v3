@@ -6,6 +6,7 @@
         :key="item.title"
         :href="item.path"
         link
+        @click="sidebard = !sidebar"
       >
         <v-list-item-icon>
           <v-icon> {{ item.icon }} </v-icon>
@@ -16,7 +17,7 @@
       </v-list-item>
     </v-navigation-drawer>
     
-    <v-app-bar fixed elevation="4" color="white">
+    <v-app-bar fixed elevate-on-scroll color="white">
             <v-spacer></v-spacer>
       <v-toolbar-title class="black--text text-h5 text-sm-h5 d-flex align-center" id="me">
         <a href="#home" class="text-decoration-none black--text ">
@@ -62,7 +63,7 @@ export default {
         sidebar:false,
       items: [
         { title: "Accueil", icon: "mdi-home", path: "#home" },
-        { title: "Services", icon: "mdi-pac-man", path: "#services" },
+        { title: "Services", icon: "mdi-handshake", path: "#services" },
         { title: "A propos", icon: "mdi-pac-man", path: "#about" },
         { title: "Résumé", icon: "mdi-lan", path: "#resume" },
         {

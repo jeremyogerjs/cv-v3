@@ -2,17 +2,19 @@
   <div>
     <v-row class="justify-sm-center align-center hero-bg" style="height: 100vh">
       <v-col cols="10" sm="9" lg="4" xl="4" class="custom-mobile-hero">
-        <span class="font-weight-bold text-h5 custom-color">Hey ! Je suis</span>
-        <p class="font-weight-bold text-h2">Jérémy Oger !</p>
-        <v-row class="align-center py-4">
+        <span class="font-weight-bold text-h6 text-md-h5 custom-color"
+          >Hey ! Je suis</span
+        >
+        <p class="font-weight-bold text-h4 text-md-h2">Jérémy Oger !</p>
+        <v-row class="align-center py-4 pl-2">
           <span class="text-body-1 mr-2 custom-color-hero">Je suis </span>
-            <span class="animate custom-color-hero text-h6">
-                {{ titleShow }}</span
-            >
+          <span class="animate custom-color-hero text-h6">
+            {{ titleShow }}</span
+          >
         </v-row>
         <p class="text--secondary">
-          Dorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusm
-          tempor incididunt ulabore et dolore magna aliqua.
+          Je suis diplomé d'un bac+2 en développement web et mobile. Spécialisé
+          dans le développement mdoerne d'application web et mobile.
         </p>
       </v-col>
       <v-col
@@ -84,17 +86,17 @@ export default {
   animation: slideY 2.5s linear infinite;
 }
 @keyframes slideY {
-    0%{
-        transform:translateY(20px);
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
 }
 @media screen and (max-width: 600px) {
   .custom-mobile-hero {

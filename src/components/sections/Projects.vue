@@ -11,7 +11,7 @@
     >
       Mes projets
     </p>
-    <v-row class="justify-center my-10 py-5">
+    <v-row class="justify-center my-0 py-2 my-md-10 py-md-5">
       <v-card
         elevation="0"
         v-for="(item, index) in projects"

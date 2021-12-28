@@ -34,10 +34,7 @@
       >
         <p
           class="
-            text-h4
-            text-center
-            text-lg-start
-            text-sm-h3
+            text-h4 text-center text-lg-start text-sm-h3
             font-weight-bold
             pb-5
             custom-border-title-section
@@ -46,8 +43,8 @@
           A propos de moi
         </p>
         <p class="text--secondary text-body-1 text-sm-center pb-5">
-          Je suis diplomé d'un bac+2 en développement web et mobile. Spécialisé
-          dans le développement mdoerne d'application web et mobile.
+          Etant passionée par la programmation,j'apprécie travailler avec les
+          technologies mordernes pour un développement efficace et efficient.
         </p>
 
         <ul class="custom-ul pb-8">
@@ -262,6 +259,37 @@ export default {
     position: absolute;
     top: 91%;
     left: 46%;
+    background-color: #e45447;
+    border-radius: 50%;
+    width: 0.3em;
+    height: 0.3em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .custom-about-mobile {
+    display: none !important;
+  }
+  .custom-li {
+    width: 130px;
+    padding: 0.3em;
+  }
+  .custom-color-text-btn {
+    margin-top: 10px;
+  }
+  .custom-border-title-section::before {
+    content: "";
+    position: absolute;
+    top: 98%;
+    left: 34%;
+    background-color: #e45447;
+    width: 3em;
+    height: 0.05em;
+  }
+  .custom-border-title-section::after {
+    content: "";
+    position: absolute;
+    top: 91%;
+    left: 47.5%;
     background-color: #e45447;
     border-radius: 50%;
     width: 0.3em;

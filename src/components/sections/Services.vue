@@ -10,7 +10,7 @@
             J'adapte mes services en fonction de vos besoins.Attentif aux nouvelles technologies, j'apporte mon expertise toujours au goût du jour.
         </p>
       </v-col>
-      <v-col cols="8" sm="8" md="8" lg="6" xl="6" class="ml-5">
+      <v-col cols="10" sm="8" md="8" lg="6" xl="6" class="ml-5">
         <v-row class="custom-services-mobile">
           <v-col cols="12" sm="10" md="10" lg="5" xl="5" class="pa-0 mr-lg-12">
             <v-card 

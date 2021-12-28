@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-section">
+  <div class="py-2 py-md-12">
     <p
       class="
         text-center text-h4 text-sm-h2
@@ -105,9 +105,6 @@ export default {
   position: -webkit-sticky;
   position: sticky;
   top: 100px;
-}
-.custom-section {
-  padding: 5em 0;
 }
 .v-list-item--active {
   color: #90acd1;
@@ -217,6 +214,27 @@ export default {
     position: absolute;
     top: 102%;
     left: 48.5%;
+    background-color: #e45447;
+    border-radius: 50%;
+    width: 0.3em;
+    height: 0.3em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .custom-border-title-section::before {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 37%;
+    background-color: #e45447;
+    width: 3em;
+    height: 0.05em;
+  }
+  .custom-border-title-section::after {
+    content: "";
+    position: absolute;
+    top: 102%;
+    left: 48.3%;
     background-color: #e45447;
     border-radius: 50%;
     width: 0.3em;
