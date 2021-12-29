@@ -44,7 +44,7 @@
         </p>
         <p class="text--secondary text-body-1 text-sm-center pb-5">
           Etant passionée par la programmation,j'apprécie travailler avec les
-          technologies mordernes pour un développement efficace et efficient.
+          technologies modernes pour un développement efficace et efficient.
         </p>
 
         <ul class="custom-ul pb-8">

@@ -14,7 +14,7 @@
         </v-row>
         <p class="text--secondary">
           Je suis diplomé d'un bac+2 en développement web et mobile. Spécialisé
-          dans le développement mdoerne d'application web et mobile.
+          dans le développement moderne d'application web et mobile.
         </p>
       </v-col>
       <v-col
