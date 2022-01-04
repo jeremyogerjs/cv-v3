@@ -46,20 +46,20 @@ export default {
           date: "2021",
           content:
             "Titre professionnel bac+2 développeur Web/mobile au CFA de la CCI.",
-          title: "Formations Développeur web",
+          title: "Formation Développeur web",
           place: "Nouméa Nouvelle Calédonie",
         },
         {
           date: "2014-2015",
           content:
             "Mention complémentaire CAP ossature bois au CFA BTP de Morcenx.",
-          title: "Formations Ossature Bois",
+          title: "Formation Ossature Bois",
           place: "Morcenx Aquitaine France",
         },
         {
           date: "2012-2014",
           content: "Diplôme CAP charpentier bois au CFA BTP de Morcenx.",
-          title: "Formations Charpentier Bois",
+          title: "Formation Charpentier Bois",
           place: "Morcenx Aquitaine France",
         },
       ],

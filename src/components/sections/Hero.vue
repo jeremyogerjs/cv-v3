@@ -12,7 +12,7 @@
             {{ titleShow }}</span
           >
         </v-row>
-        <p class="text--secondary">
+        <p class="text--secondary pt-4">
           Je suis diplomé d'un bac+2 en développement web et mobile. Spécialisé
           dans le développement moderne d'application web et mobile.
         </p>
@@ -25,12 +25,7 @@
         class="hidden-sm-only hidden-md-only hidden-xs-only"
       >
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
-            sint officia voluptas, rem voluptatibus reprehenderit nostrum
-            numquam nulla quam accusamus excepturi alias consectetur assumenda
-            vitae sapiente officiis ab quidem perspiciatis?
-          </p>
+          <v-img contain aspect-ratio="1" src="banner-hero.webp"></v-img>
         </div>
       </v-col>
     </v-row>
@@ -45,7 +40,6 @@ export default {
       title: [
         "Développeur frontend",
         "Développeur backend",
-        "Développeur freelance",
       ],
       titleShow: "Développeur frontend",
       interval: 0,

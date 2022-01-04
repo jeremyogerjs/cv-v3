@@ -33,7 +33,7 @@ export default {
     data() {
         return {
             awards:[
-                {date:"2021",title:"Ocean Hackathon",content:"Arrivée en deuxième position pour la première Edition du Ocean Hackathon avec le projet WAVES.",place:"Nouméa"},
+                {date:"2021",title:"Ocean Hackathon",content:"Arrivé en deuxième position pour la première Edition du Ocean Hackathon avec le projet WAVES.",place:"Nouméa"},
             ]
         }
     }

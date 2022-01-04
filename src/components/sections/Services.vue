@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       services1:[
-        {icon:"mdi-lightbulb-on-outline",title:"Solution adapter",subtitle:"A vos côté pendant tout le processus.",margin:false},
+        {icon:"mdi-lightbulb-on-outline",title:"Solution adaptée",subtitle:"A vos côté pendant tout le processus.",margin:false},
         {icon:"mdi-diamond-stone",title:"Développement Web",subtitle:"Développement complet de votre solution web.",margin:true},
       ],
       services2:[

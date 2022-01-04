@@ -52,21 +52,20 @@ export default {
     return {
       projects: [
         {
-          type: "Ecommerce",
-          path: "",
-          languages: ["vueJS", "Laravel", "MySQL"],
+          type: "Blog",
+          path: "https://github.com/jeremyogerjs/blog.git",
+          languages: ["PHP", "PDO", "MySQL"],
         },
         {
           type: "Réservations",
-          path: "efef",
-          languages: ["VueJS", "Laravel", "MySQL"],
+          path: "https://github.com/jeremyogerjs/ecf-6.git",
+          languages: ["PHP/POO", "PDO", "MySQL"],
         },
         {
-          type: "Appli mobile",
-          path: "",
-          languages: ["React Navtive", "Laravel", "MySQL"],
+          type: "Ecommerce",
+          path: "https://github.com/jeremyogerjs/reservation-wp.git",
+          languages: ["Wordpress", "MySQL"],
         },
-        { type: "Blog", path: "fefe", languages: ["Wordpress", "MySQL"] },
       ],
     };
   },

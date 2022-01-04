@@ -33,7 +33,7 @@ export default {
     data() {
         return {
             experiences:[
-                {date:"Août/Septembre 2021",content:"Stage d'une durée d'un mois chez ISINC en travaillant sur une API en Golang.",title:"Stage",place:"ISINC"},
+                {date:"Août/Septembre 2021",content:"Stage d'une durée d'un mois chez ISI.NC en travaillant sur une API en Golang.",title:"Stage",place:"ISINC"},
                 {date:"Mai 2021",content:"Stage d'une durée d'un mois chez Partners Intérim en travaillant sur VueJS.",title:"Stage",place:"Partners Intérim"},
                 {date:"2017-2018",content:"Poste d'ouvrier qualifé en tant que charpentier bois. J'ai travaillé sur la construction du nouveau centre culturel de Hienghène.",title:"Charpentier bois",place:"Les bois du nord"},
                 {date:"2016-2017",content:"J'ai travaillé sur diverses missions tel que manoeuvre chez O.C.R, 3 mois en tant que manoeuvre chez A.E.I ou encore 3 mois comme magasinier chez Discount Teari.",title:"Intérimaire",place:"Manpower"},

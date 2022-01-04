@@ -43,7 +43,7 @@
           A propos de moi
         </p>
         <p class="text--secondary text-body-1 text-sm-center pb-5">
-          Etant passionée par la programmation,j'apprécie travailler avec les
+          Etant passioné par la programmation,j'apprécie travailler avec les
           technologies modernes pour un développement efficace et efficient.
         </p>
 
@@ -98,7 +98,7 @@
             href="https://github.com/jeremyogerjs"
             color="#90acd1"
             target="_blank"
-            rounded="pill"
+            rounded
             x-large
             class="custom-color-text-btn"
             :ripple="false"
@@ -110,7 +110,7 @@
             href="https://www.linkedin.com/in/jeremy-oger-a78143171/"
             color="#90acd1"
             target="_blank"
-            rounded="pill"
+            rounded
             x-large
             class="custom-color-text-btn"
             :ripple="false"
@@ -122,7 +122,7 @@
             href="./CV-jérémyOger-étudiant.pdf"
             color="#90acd1"
             target="_blank"
-            rounded="pill"
+            rounded
             x-large
             class="custom-color-text-btn"
             :ripple="false"

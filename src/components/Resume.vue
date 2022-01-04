@@ -66,24 +66,37 @@ export default {
   data() {
     return {
       menuItems: [
-        { title: "Formations", icon: "", path: "#formations", isActive: false },
+        {
+          title: "Formations",
+          icon: "",
+          path: "#formations",
+          isActive: false,
+          offSet: null,
+          offSetHeight: null,
+        },
         {
           title: "Experiences",
           icon: "",
           path: "#experiences",
           isActive: false,
+          offSet: null,
+          offSetHeight: null,
         },
         {
           title: "Compétences",
           icon: "",
           path: "#competences",
           isActive: false,
+          offSet: null,
+          offSetHeight: null,
         },
         {
           title: "Récompences",
           icon: "",
           path: "#recompenses",
           isActive: false,
+          offSet: null,
+          offSetHeight: null,
         },
       ],
     };
@@ -93,6 +106,23 @@ export default {
       this.menuItems.forEach((el) => (el.isActive = false));
       elem.isActive = true;
     },
+    handleScroll() {
+      // const data = el.getBoundingClientRect().top;
+      console.log(window);
+      this.menuItems.forEach((elem) => {
+        elem.isActive = false;
+        if (window.pageYOffset >= elem.offSet && window.pageYOffset < (elem.offSet + elem.offSetHeight)) {
+          elem.isActive = true;
+        }
+      });
+    },
+  },
+  mounted() {
+    this.menuItems.forEach((elem) => {
+      elem.offSet = document.querySelector(elem.path).offsetTop;
+      elem.offSetHeight = document.querySelector(elem.path).offsetHeight;
+    });
+    window.addEventListener("scroll", this.handleScroll);
   },
 };
 </script>
