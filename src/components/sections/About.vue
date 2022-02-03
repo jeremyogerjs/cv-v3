@@ -63,15 +63,7 @@
               >Adresse:
             </span>
             <span class="text-body-1 text--secondary"
-              >31 route des phoenix</span
-            >
-          </li>
-          <li class="d-flex align-center">
-            <span class="font-weight-bold text-button custom-li"
-              >Code postal:
-            </span>
-            <span class="text-body-1 text--secondary"
-              >98830 Dumbéa - Auteuil</span
+              >New Caledonia</span
             >
           </li>
           <li class="d-flex align-center">
